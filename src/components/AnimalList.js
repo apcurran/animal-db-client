@@ -17,14 +17,19 @@ export default function AnimalList() {
 
     return (
         <main className="main">
-            <h1>Main Animal List Page</h1>
-            {animals.map(animal => (
-                <article className="animal-card" key={animal._id}>
-                    <Link to={`/animal/${animal._id}`}>
-                        <h3 className="animal-card__title">{animal.animal_common_name}</h3>
-                    </Link>
-                </article>
-            ))}
+            <h1 className="main__title">Animals</h1>
+            <div className="animal-card-group">
+                {animals.map(animal => (
+                    <article className="animal-card" key={animal._id}>
+                        <Link to={`/animal/${animal._id}`}>
+                            <h3 className="animal-card__title">{animal.animal_common_name}</h3>
+                        </Link>
+                        <figure className="animal-card__fig">
+                            <img src={animal.main_img_url} alt={animal.animal_common_name} className="animal-card__fig__img"/>
+                        </figure>
+                    </article>
+                ))}
+            </div>
         </main>
     )
 }

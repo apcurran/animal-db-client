@@ -25,13 +25,15 @@ a {
   min-height: 100vh;
   display: grid;
   grid-auto-rows: auto 1fr auto;
+
+  background-color: #f4f4f5;
 }
 
 /* Header */
 
 header {
   padding: 1rem 0;
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .nav {
@@ -65,15 +67,53 @@ header {
   margin: 0 auto;
 }
 
+.main__title {
+  margin: 2rem 0;
+}
+
+.animal-card-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.animal-card {
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  box-shadow: 10px 10px 0 0 #90CDF4;
+}
+
+.animal-card__title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #90CDF4;
+}
+
+.animal-card__fig__img {
+  width: 100%;
+}
+
+.animal-info__fig {
+  width: 50rem;
+}
+
+.animal-info__fig__img {
+  width: 100%;
+}
+
 /* Footer */
 
 footer {
   padding: 1.5rem 0;
-  background-color: #eee;
+  color: #fff;
+  background-color: #1A202C;
 }
 
 .footer__title {
   text-align: center;
+  font-size: .95rem;
+  font-weight: 400;
+  opacity: .65;
 }
 
 /* Media Queries */

@@ -18,8 +18,8 @@ export default function AnimalInfo({ match }) {
         <main className="main animal-info-page">
             <h1>{animalInfo.animal_common_name}</h1>
             <h2>{animalInfo.animal_scientific_name}</h2>
-            <figure>
-                <img src={animalInfo.main_img_url} alt={animalInfo.animal_common_name}/>
+            <figure className="animal-info__fig">
+                <img className="animal-info__fig__img" src={animalInfo.main_img_url} alt={animalInfo.animal_common_name}/>
             </figure>
         </main>
     )

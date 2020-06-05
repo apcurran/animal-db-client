@@ -15,7 +15,7 @@ export default function AnimalInfo({ match }) {
     }, []);
 
     return (
-        <main className="animal-info-page">
+        <main className="main animal-info-page">
             <h1>{animalInfo.animal_common_name}</h1>
             <h2>{animalInfo.animal_scientific_name}</h2>
             <figure>

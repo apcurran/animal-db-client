@@ -16,7 +16,7 @@ export default function AnimalList() {
     }, []);
 
     return (
-        <main>
+        <main className="main">
             <h1>Main Animal List Page</h1>
             {animals.map(animal => (
                 <article className="animal-card" key={animal._id}>

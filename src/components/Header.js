@@ -5,12 +5,8 @@ export default function Header() {
     return (
         <header>
             <nav className="nav">
+                <Link to="/" className="logo">Animal DB</Link>
                 <ul className="nav__list">
-                    <li className="nav__item">
-                        <Link to="/">
-                            Animals
-                        </Link>
-                    </li>
                     <li className="nav__item">
                         <Link to="/about">
                             About

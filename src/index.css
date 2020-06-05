@@ -80,6 +80,7 @@ header {
 .about__img {
   max-width: 100%;
   width: 47rem;
+  margin-bottom: 1rem;
 }
 
 .about__desc {

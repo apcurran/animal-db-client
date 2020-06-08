@@ -17,8 +17,8 @@ function App() {
           <Route path="/" exact component={AnimalList} />
           <Route path="/animal/:id" component={AnimalInfo} />
           <Route path="/about" component={About} />
-          <Route path="/register" component={Register} />
-          <Route path="/login" component={Login} />
+          <Route path="/user/register" exact component={Register} />
+          <Route path="/user/login" exact component={Login} />
         </Switch>
         <Footer />
       </div>

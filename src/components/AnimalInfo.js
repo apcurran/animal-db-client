@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AnimalDelete from "./AnimalDelete";
 
 export default function AnimalInfo({ match }) {
     const [animalInfo, setAnimalInfo] = useState({});
@@ -23,6 +24,9 @@ export default function AnimalInfo({ match }) {
             <main className="main animal-info-page">
                 <h2>{animalInfo.animal_scientific_name}</h2>
             </main>
+            {localStorage.authToken ? (
+                <AnimalDelete animalId={animalInfo._id} />
+            ) : null}
         </div>
     )
 }

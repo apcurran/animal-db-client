@@ -13,7 +13,7 @@ export default function AnimalList() {
                 setAnimals(data);
             })
             .catch(err => console.error(err));
-    }, []);
+    }, [API_URL]);
 
     return (
         <main className="main">

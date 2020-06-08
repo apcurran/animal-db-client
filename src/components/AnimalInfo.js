@@ -9,7 +9,6 @@ export default function AnimalInfo({ match }) {
         fetch(API_URL)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 setAnimalInfo(data);
             })
             .catch(err => console.error(err));

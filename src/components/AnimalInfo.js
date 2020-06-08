@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function AnimalInfo({ match }) {
     const [animalInfo, setAnimalInfo] = useState({});
@@ -15,7 +15,7 @@ export default function AnimalInfo({ match }) {
     }, []);
 
     return (
-        <Fragment>
+        <div>
             <figure className="hero-container">
                 <img src={animalInfo.main_img_url} alt={animalInfo.animal_common_name} className="hero"/>
                 <figcaption className="hero-caption">{animalInfo.animal_common_name}</figcaption>
@@ -23,6 +23,6 @@ export default function AnimalInfo({ match }) {
             <main className="main animal-info-page">
                 <h2>{animalInfo.animal_scientific_name}</h2>
             </main>
-        </Fragment>
+        </div>
     )
 }

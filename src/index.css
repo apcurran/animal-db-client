@@ -11,7 +11,9 @@
   --wrapper-width-md: 50rem;
 }
 
-body {
+body,
+button,
+textarea {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -74,8 +76,8 @@ header {
 }
 
 .form {
-  width: 40rem;
-  max-width: 92.5%;
+  width: 92.5%;
+  max-width: 35rem;
   margin: 1rem auto 4rem auto;
 }
 
@@ -96,10 +98,14 @@ header {
   border: 1px solid #ccc;
 }
 
+.form-group__textarea {
+  line-height: 1.6;
+}
+
 .form__submit {
   padding: .6rem 1.25rem;
   cursor: pointer;
-  border: 1px solid #222;
+  border: 2px solid #222;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -139,8 +145,8 @@ header {
 /* Animal Main */
 
 .main {
-  max-width: 90%;
-  width: var(--wrapper-width-lg);
+  max-width: var(--wrapper-width-lg);
+  width: 92.5%;
   margin: 0 auto;
 }
 
@@ -169,6 +175,13 @@ header {
 
 .animal-card__fig__img {
   width: 100%;
+}
+
+/* Animal Info Page */
+
+.animal-info-page {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .hero-container {
@@ -200,6 +213,45 @@ header {
   bottom: -.75rem;
   left: 0;
   background-color: #68D391;
+}
+
+.animal-info-fact {
+  padding: 2rem;
+  background-color: #222;
+  color: #fff;
+}
+
+/* Delete Animal */
+
+.delete-animal__title {
+  margin: 1rem 0;
+}
+
+.delete-animal__btn {
+  margin-bottom: 1.5rem;
+}
+
+/* Edit Animal */
+
+.animal-edit-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: .6rem 1.25rem;
+  cursor: pointer;
+  border: 2px solid #222;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+
+  transition: 
+    background-color 175ms ease-in-out,
+    color 175ms ease-in-out;
+}
+
+.animal-edit-link:hover,
+.animal-edit-link:focus {
+  background-color: #222;
+  color: #fff;
 }
 
 /* Footer */

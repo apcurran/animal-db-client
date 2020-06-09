@@ -35,13 +35,13 @@ export default function AnimalDelete({ animalId }) {
     }
 
     return (
-        <div>
+        <div className="delete-animal-container">
             {error ? (
                 <h3>{error}</h3>
             ) : null}
-            <h2>Hello, Admin!</h2>
-            <form onSubmit={handleDelete} className="form">
-                <button type="submit" className="animal-delete">Delete Animal</button>
+            <h2 className="delete-animal__title">Hello, Admin!</h2>
+            <form onSubmit={handleDelete}>
+                <button type="submit" className="form__submit delete-animal__btn">Delete Animal</button>
             </form>
         </div>
     )

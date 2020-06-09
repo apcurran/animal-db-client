@@ -15,7 +15,7 @@ export default function Header() {
                         </li>
                         <li className="nav__item">
                             <Link to="/add">
-                                Add Animal
+                                Add
                             </Link>
                         </li>
                         <li className="nav__item">

@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import AnimalList from './components/AnimalList';
 import AnimalInfo from './components/AnimalInfo';
 import AnimalAdd from './components/AnimalAdd';
+import AnimalEdit from './components/AnimalEdit';
 import About from "./components/About";
 import Register from "./components/Register";
 import Login from "./components/Login";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" exact component={AnimalList} />
           <Route path="/about" component={About} />
           <Route path="/animal/:id" component={AnimalInfo} />
+          <Route path="/edit/:id" exact component={AnimalEdit} />
           <Route path="/add" exact component={AnimalAdd} />
           <Route path="/user/register" exact component={Register} />
           <Route path="/user/login" exact component={Login} />

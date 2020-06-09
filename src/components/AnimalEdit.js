@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useHistory } from "react-router-dom";
 
-export default function AnimalAdd() {
+export default function AnimalEdit({ match }) {
     const [animalCommonName, setAnimalCommonName] = useState("");
     const [animalScientificName, setAnimalScientificName] = useState("");
     const [animalType, setAnimalType] = useState("");
@@ -19,25 +19,28 @@ export default function AnimalAdd() {
     async function handleSubmit(event) {
         event.preventDefault();
 
-        const API_URL = `http://localhost:5000/api/animals/animal`;
+        const animalObj = {
+            animal_common_name: animalCommonName,
+            animal_scientific_name: animalScientificName,
+            animal_type: animalType,
+            animal_diet: animalDiet,
+            animal_lifespan: animalLifespan,
+            animal_size: animalSize,
+            animal_weight: animalWeight,
+            animal_fact: animalFact,
+            animal_desc: animalDesc,
+            main_img_url: mainImgUrl
+        };
+
+        const updatedAnimalObj = filterEmptyObjProps(animalObj);
+        const API_URL = `http://localhost:5000/api/animals/animal/${match.params.id}`;
         const options = {
-            method: "POST",
+            method: "PATCH",
             headers: {
                 Authorization: `Bearer ${localStorage.authToken}`,
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-                animal_common_name: animalCommonName,
-                animal_scientific_name: animalScientificName,
-                animal_type: animalType,
-                animal_diet: animalDiet,
-                animal_lifespan: animalLifespan,
-                animal_size: animalSize,
-                animal_weight: animalWeight,
-                animal_fact: animalFact,
-                animal_desc: animalDesc,
-                main_img_url: mainImgUrl 
-            })
+            body: JSON.stringify(updatedAnimalObj)
         };
 
         const response = await fetch(API_URL, options);
@@ -55,12 +58,24 @@ export default function AnimalAdd() {
         history.push("/");
     }
 
+    function filterEmptyObjProps(animalObj) {
+        let updatedObj = {};
+
+        for (const [key, val] of Object.entries(animalObj)) {
+            if (val === "") continue;
+
+            updatedObj[key] = val;
+        }
+
+        return updatedObj;
+    }
+
     return (
         <div>
             {error ? (
                 <h3>{error}</h3>
             ) : null}
-            <h2 className="form-title">Hello, Admin!</h2>
+            <h2 className="form-title">Hello, Admin! (Animal Edit)</h2>
             <form onSubmit={handleSubmit} className="form">
                 <div className="form-group">
                     <label htmlFor="animalCommonName" className="form-group__label">Common Animal Name</label>

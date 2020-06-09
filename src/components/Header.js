@@ -14,6 +14,11 @@ export default function Header() {
                             </Link>
                         </li>
                         <li className="nav__item">
+                            <Link to="/add">
+                                Add Animal
+                            </Link>
+                        </li>
+                        <li className="nav__item">
                             <Link to="/user/logout">
                                 Log Out
                             </Link>

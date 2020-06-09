@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Logout from "./Logout";
 
 export default function Header() {
     return (
@@ -19,9 +20,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li className="nav__item">
-                            <Link to="/user/logout">
-                                Log Out
-                            </Link>
+                            <Logout />
                         </li>
                     </ul>
                 ) : (

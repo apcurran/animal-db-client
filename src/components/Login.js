@@ -47,8 +47,8 @@ export default function Login() {
 
     return (
         <div>
-            <h1>Login</h1>
             <form onSubmit={handleSubmit} className="form">
+                <h1 className="form__title">Log In</h1>
                 {error ? (
                     <h3 className="form__error">{error}</h3>
                 ) : null}

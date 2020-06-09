@@ -47,8 +47,8 @@ export default function Register() {
 
     return (
         <div>
-            <h1>Sign Up</h1>
             <form onSubmit={handleSubmit} className="form">
+                <h1 className="form__title">Sign Up</h1>
                 {error ? (
                     <h3 className="form__error">{error}</h3>
                 ) : null}
@@ -88,7 +88,7 @@ export default function Register() {
                         className="form-group__input"
                     />
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" className="form__submit">Submit</button>
             </form>
         </div>
     )

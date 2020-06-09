@@ -60,8 +60,8 @@ export default function AnimalAdd() {
             {error ? (
                 <h3>{error}</h3>
             ) : null}
-            <h2 className="form-title">Hello, Admin!</h2>
             <form onSubmit={handleSubmit} className="form">
+                <h2 className="form__title">Hello, Admin!</h2>
                 <div className="form-group">
                     <label htmlFor="animalCommonName" className="form-group__label">Common Animal Name</label>
                     <input

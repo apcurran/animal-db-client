@@ -70,7 +70,7 @@ export default function Login() {
                         className="form-group__input"
                     />
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" className="form__submit">Submit</button>
             </form>
         </div>
     )

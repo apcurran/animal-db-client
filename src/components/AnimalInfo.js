@@ -21,21 +21,21 @@ export default function AnimalInfo({ match }) {
                 <img src={animalInfo.main_img_url} alt={animalInfo.animal_common_name} className="hero"/>
                 <figcaption className="hero-caption">{animalInfo.animal_common_name}</figcaption>
             </figure>
-            <main className="main animal-info-page">
+            <main className="animal-info-page">
                 <article className="animal-info-card">
-                    <p>
+                    <p className="animal-info-card__para">
                         Scientific Name: <span>{animalInfo.animal_scientific_name}</span>
                     </p>
-                    <p>
+                    <p className="animal-info-card__para">
                         Animal Type: <span>{animalInfo.animal_type}</span>
                     </p>
-                    <p>
+                    <p className="animal-info-card__para">
                         Diet: <span>{animalInfo.animal_diet}</span>
                     </p>
-                    <p>
+                    <p className="animal-info-card__para">
                         Lifespan: <span>{animalInfo.animal_lifespan}</span>
                     </p>
-                    <p>
+                    <p className="animal-info-card__para">
                         Weight: <span>{animalInfo.animal_weight}</span>
                     </p>
                 </article>
@@ -43,12 +43,15 @@ export default function AnimalInfo({ match }) {
                     {animalInfo.animal_desc}
                 </p>
                 <article className="animal-info-fact">
-                    {animalInfo.animal_fact}
+                    <h3 className="animal-info-fact__title">Did You Know?</h3>
+                    <p className="animal-info-fact__para">{animalInfo.animal_fact}</p>
                 </article>
                 {localStorage.authToken ? (
-                    <AnimalDelete animalId={animalInfo._id} />
+                    <div className="">
+                        <AnimalDelete animalId={animalInfo._id} />
+                        <AnimalEditLink animalId={animalInfo._id} />
+                    </div>
                 ) : null}
-                <AnimalEditLink animalId={animalInfo._id} />
             </main>
         </div>
     )

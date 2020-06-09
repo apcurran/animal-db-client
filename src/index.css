@@ -180,8 +180,9 @@ header {
 /* Animal Info Page */
 
 .animal-info-page {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 4rem auto;
+  max-width: 35rem;
+  width: 92.5%;
 }
 
 .hero-container {
@@ -215,10 +216,38 @@ header {
   background-color: #68D391;
 }
 
+.animal-info-card {
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.animal-info-card__para {
+  margin-bottom: .75rem;
+  font-weight: 700;
+}
+
+.animal-info-card__para span {
+  margin-left: .5rem;
+  font-weight: 400;
+}
+
 .animal-info-fact {
-  padding: 2rem;
+  padding: 1.5rem;
+  border-radius: 4px;
   background-color: #222;
   color: #fff;
+}
+
+.animal-info-fact__title {
+  margin-bottom: .5rem;
+  color: hsl(205, 79%, 76%);
+}
+
+.animal-info-fact__para {
+  margin-bottom: 0;
 }
 
 /* Delete Animal */

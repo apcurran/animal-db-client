@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 
 export default function AnimalDelete({ animalId }) {

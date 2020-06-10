@@ -45,12 +45,10 @@ export default function AnimalAdd() {
     
         if (data.hasOwnProperty("error")) {
             console.log(data.error);
-            // setError(data.error);
+            setError(data.error);
 
             return;
         }
-
-        const message = data.message;
 
         history.push("/");
     }

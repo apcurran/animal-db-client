@@ -9,7 +9,6 @@ export default function AnimalList() {
         fetch(API_URL)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 setAnimals(data);
             })
             .catch(err => console.error(err));
@@ -17,7 +16,7 @@ export default function AnimalList() {
 
     return (
         <main className="main">
-            <h1 className="main__title">Animals</h1>
+            <h1 className="main__title">Featured Animals</h1>
             <div className="animal-card-group">
                 {animals.map(animal => (
                     <article className="animal-card" key={animal._id}>

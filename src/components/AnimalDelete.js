@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 
 export default function AnimalDelete({ animalId }) {
     const [error, setError] = useState("");
-    const [successMsg, setSuccessMsg] = useState("");
 
     let history = useHistory();
 
@@ -26,10 +25,6 @@ export default function AnimalDelete({ animalId }) {
 
             return;
         }
-
-        const message = data.message;
-
-        setSuccessMsg(message);
 
         history.push("/");
     }

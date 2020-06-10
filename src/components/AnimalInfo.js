@@ -13,7 +13,7 @@ export default function AnimalInfo({ match }) {
                 setAnimalInfo(data);
             })
             .catch(err => console.error(err));
-    }, []);
+    }, [API_URL]);
 
     return (
         <div>

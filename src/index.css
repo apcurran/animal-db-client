@@ -154,11 +154,11 @@ header {
 .main {
   max-width: var(--wrapper-width-lg);
   width: 92.5%;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .main__title {
-  margin: 2rem 0;
+  margin-bottom: 1.5rem;
   font-weight: 400;
 }
 

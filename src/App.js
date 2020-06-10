@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from './components/Footer';
@@ -11,10 +11,17 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 
 function App() {
+  // Define Navlinks state here and pass down as props
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  function handleLogin() {
+    setLoggedIn(!loggedIn);
+  }
+
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Header loggedIn={loggedIn} handleLogin={handleLogin} />
         <Switch>
           <Route path="/" exact component={AnimalList} />
           <Route path="/about" component={About} />
@@ -22,7 +29,7 @@ function App() {
           <Route path="/edit/:id" exact component={AnimalEdit} />
           <Route path="/add" exact component={AnimalAdd} />
           <Route path="/user/register" exact component={Register} />
-          <Route path="/user/login" exact component={Login} />
+          <Route path="/user/login" exact render={() => <Login handleLogin={handleLogin} />} />
         </Switch>
         <Footer />
       </div>

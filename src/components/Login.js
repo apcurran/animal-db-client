@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useHistory } from "react-router-dom";
 
-export default function Login() {
+export default function Login({ handleLogin }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -36,6 +36,8 @@ export default function Login() {
             const token = data;
 
             localStorage.setItem("authToken", token);
+
+            handleLogin();
 
             history.push("/"); // Send to animal list page with admin rights
     

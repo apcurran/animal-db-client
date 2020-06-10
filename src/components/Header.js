@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Logout from "./Logout";
 
-export default function Header() {
+export default function Header({ loggedIn, handleLogin }) {
     return (
         <header>
             <nav className="nav">
                 <Link to="/" className="logo">Animal DB</Link>
-                {localStorage.authToken ? (
+                {loggedIn ? (
                     <ul className="nav__list">
                         <li className="nav__item">
                             <Link to="/about">
@@ -20,7 +20,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li className="nav__item">
-                            <Logout />
+                            <Logout handleLogin={handleLogin} />
                         </li>
                     </ul>
                 ) : (

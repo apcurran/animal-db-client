@@ -9,7 +9,7 @@ export default function AnimalDelete({ animalId }) {
     async function handleDelete(event) {
         event.preventDefault();
 
-        const API_URL = `http://localhost:5000/api/animals/animal/${animalId}`;
+        const API_URL = `/api/animals/animal/${animalId}`;
         const options = {
             method: "DELETE",
             headers: {

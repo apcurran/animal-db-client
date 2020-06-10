@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function AnimalList() {
     const [animals, setAnimals] = useState([]);
-    const API_URL = "http://localhost:5000/api/animals";
+    const API_URL = "/api/animals";
 
     useEffect(() => {
         fetch(API_URL)

@@ -13,7 +13,7 @@ export default function Register() {
     const handleSubmit = useCallback( async (event) => {
         event.preventDefault();
 
-        const API_URL = "http://localhost:5000/api/user/register";
+        const API_URL = "/api/user/register";
         const options = {
             method: "POST",
             headers: {

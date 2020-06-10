@@ -11,7 +11,7 @@ export default function Login({ handleLogin }) {
     const handleSubmit = useCallback( async (event) => {
         event.preventDefault();
 
-        const API_URL = "http://localhost:5000/api/user/login";
+        const API_URL = "/api/user/login";
         const options = {
             method: "POST",
             headers: {

@@ -4,7 +4,7 @@ import AnimalEditLink from './AnimalEditLink';
 
 export default function AnimalInfo({ match }) {
     const [animalInfo, setAnimalInfo] = useState({});
-    const API_URL = `http://localhost:5000/api/animals/animal/${match.params.id}`;
+    const API_URL = `/api/animals/animal/${match.params.id}`;
 
     useEffect(() => {
         fetch(API_URL)

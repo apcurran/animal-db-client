@@ -11,7 +11,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 
 function App() {
-  // Define Navlinks state here and pass down as props
+  // Define navlinks state here and pass down as props
   const [loggedIn, setLoggedIn] = useState(false);
 
   function handleLogin() {

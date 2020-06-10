@@ -47,7 +47,6 @@ export default function AnimalEdit({ match }) {
         const data = await response.json();
     
         if (data.hasOwnProperty("error")) {
-            console.log(data.error);
             setError(data.error);
 
             return;
@@ -71,7 +70,7 @@ export default function AnimalEdit({ match }) {
     return (
         <div>
             {error ? (
-                <h3>{error}</h3>
+                <h3 className="error">{error}</h3>
             ) : null}
             <form onSubmit={handleSubmit} className="form">
                 <h2 className="form__title">Hello, Admin! (Animal Edit)</h2>

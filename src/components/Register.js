@@ -50,7 +50,7 @@ export default function Register() {
             <form onSubmit={handleSubmit} className="form">
                 <h1 className="form__title">Sign Up</h1>
                 {error ? (
-                    <h3 className="form__error">{error}</h3>
+                    <h3 className="error">{error}</h3>
                 ) : null}
                 <div className="form-group">
                     <label htmlFor="name" className="form-group__label">Name</label>

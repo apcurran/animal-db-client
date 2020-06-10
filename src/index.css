@@ -319,6 +319,10 @@ footer {
   color: #90CDF4;
 }
 
+.error {
+  color: darkred;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 70rem) {

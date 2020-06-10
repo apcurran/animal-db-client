@@ -32,7 +32,7 @@ export default function AnimalDelete({ animalId }) {
     return (
         <div className="delete-animal-container">
             {error ? (
-                <h3>{error}</h3>
+                <h3 className="error">{error}</h3>
             ) : null}
             <h2 className="delete-animal__title">Hello, Admin!</h2>
             <form onSubmit={handleDelete}>

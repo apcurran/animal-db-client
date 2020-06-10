@@ -52,7 +52,7 @@ export default function Login({ handleLogin }) {
             <form onSubmit={handleSubmit} className="form">
                 <h1 className="form__title">Log In</h1>
                 {error ? (
-                    <h3 className="form__error">{error}</h3>
+                    <h3 className="error">{error}</h3>
                 ) : null}
                 <div className="form-group">
                     <label htmlFor="email" className="form-group__label">Email</label>

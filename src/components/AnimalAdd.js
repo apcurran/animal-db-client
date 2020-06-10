@@ -19,7 +19,7 @@ export default function AnimalAdd() {
     async function handleSubmit(event) {
         event.preventDefault();
 
-        const API_URL = `/api/animals/animal`;
+        const API_URL = `https://apcurran-animaldb.herokuapp.com/api/animals/animal`;
         const options = {
             method: "POST",
             headers: {

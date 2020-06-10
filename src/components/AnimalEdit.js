@@ -33,7 +33,7 @@ export default function AnimalEdit({ match }) {
         };
 
         const updatedAnimalObj = filterEmptyObjProps(animalObj);
-        const API_URL = `/api/animals/animal/${match.params.id}`;
+        const API_URL = `https://apcurran-animaldb.herokuapp.com/api/animals/animal/${match.params.id}`;
         const options = {
             method: "PATCH",
             headers: {

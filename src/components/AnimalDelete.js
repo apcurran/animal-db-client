@@ -9,7 +9,7 @@ export default function AnimalDelete({ animalId }) {
     async function handleDelete(event) {
         event.preventDefault();
 
-        const API_URL = `/api/animals/animal/${animalId}`;
+        const API_URL = `https://apcurran-animaldb.herokuapp.com/api/animals/animal/${animalId}`;
         const options = {
             method: "DELETE",
             headers: {

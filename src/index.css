@@ -9,6 +9,7 @@
 :root {
   --wrapper-width-lg: 70rem;
   --wrapper-width-md: 50rem;
+  --light-blue: #90cdf4;
 }
 
 body,
@@ -162,6 +163,10 @@ header {
   font-weight: 400;
 }
 
+.loading {
+  color: var(--light-blue);
+}
+
 .animal-card-group {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -171,13 +176,13 @@ header {
 .animal-card {
   padding: 1.5rem 2rem;
   background-color: #fff;
-  box-shadow: 10px 10px 0 0 #90CDF4;
+  box-shadow: 10px 10px 0 0 var(--light-blue);
 }
 
 .animal-card__title {
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  color: #90CDF4;
+  color: var(--light-blue);
 }
 
 .animal-card__fig__img {

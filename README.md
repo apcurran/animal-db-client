@@ -1,7 +1,5 @@
 # Animal DB App (Client)
 
-[Live Site](https://apcurran-animaldb.netlify.app/)
-
 ## Features:
 
 * Admin account creation
